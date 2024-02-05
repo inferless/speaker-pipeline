@@ -35,7 +35,7 @@ INPUT_SCHEMA = {
       "shape": [
         1
       ],
-      "data": [
+      "example": [
         1.25
       ]
     },
@@ -45,7 +45,7 @@ INPUT_SCHEMA = {
       "shape": [
         1
       ],
-      "data": [
+      "example": [
         "fr"
       ]
     }
