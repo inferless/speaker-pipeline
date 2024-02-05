@@ -1,6 +1,6 @@
 # Speaker-Pipeline
 
-In this template we will import the `suno/bark` model used for converting text into speech.
+In this template, we will import the `suno/bark` model used for converting text into speech.
 
 ---
 ## Prerequisites
@@ -17,11 +17,6 @@ Get started by forking the repository. You can do this by clicking on the fork b
 
 This will create a copy of the repository in your own GitHub account, allowing you to make changes and customize it according to your needs.
 
-### Create a Custom Runtime in Inferless
-To access the custom runtime window in Inferless, simply navigate to the sidebar and click on the Create new Runtime button. A pop-up will appear.
-
-Next, provide a suitable name for your custom runtime and proceed by uploading the `runtime.yaml` file given above. Finally, ensure you save your changes by clicking on the save button.
-
 ### Import the Model in Inferless
 Log in to your inferless account, select the workspace you want the model to be imported into and click the Add Model button.
 
@@ -31,81 +26,6 @@ Enter all the required details to Import your model. Refer [this link](https://d
 
 The following is a sample Input and Output JSON for this model which you can use while importing this model on Inferless.
 
-### Input
-```json
-{
-  "inputs": [
-    {
-      "name": "transcription_file",
-      "datatype": "BYTES",
-      "shape": [
-        1
-      ],
-      "data": [
-        "https://inferless-public.s3.amazonaws.com/sample.txt"
-      ]
-    },
-    {
-      "name": "alpha",
-      "datatype": "FP32",
-      "shape": [
-        1
-      ],
-      "data": [
-        0.123
-      ]
-    },
-    {
-      "name": "beta",
-      "datatype": "FP32",
-      "shape": [
-        1
-      ],
-      "data": [
-        0.456
-      ]
-    },
-    {
-      "name": "speed",
-      "datatype": "FP32",
-      "shape": [
-        1
-      ],
-      "data": [
-        1.25
-      ]
-    },
-    {
-      "name": "target_lang",
-      "datatype": "BYTES",
-      "shape": [
-        1
-      ],
-      "data": [
-        "fr"
-      ]
-    }
-  ]
-}
-```
-
-### Output
-```json
-{
-  "outputs": [
-    {
-      "name": "generated_audio_base64",
-      "datatype": "BYTES",
-      "shape": [
-        1
-      ],
-      "data": [
-        "generated base64 text"
-      ]
-    }
-  ]
-}
-```
 
 ---
 ## Curl Command
