@@ -1,3 +1,6 @@
+import os
+os.environ["HF_HUB_ENABLE_HF_TRANSFER"]='1'
+from huggingface_hub import snapshot_download
 from transformers import AutoProcessor, AutoModel
 import numpy as np
 import io
@@ -8,6 +11,7 @@ import requests
 
 class InferlessPythonModel:
     def initialize(self):
+        snapshot_download(repo_id="suno/bark",allow_patterns=["*.bin"])
         self.processor = AutoProcessor.from_pretrained("suno/bark")
         self.model = AutoModel.from_pretrained("suno/bark")
 
